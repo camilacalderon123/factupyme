@@ -1,0 +1,150 @@
+
+/*---------------tipografías------------------*/
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('../fonts/poppins/Poppins-Regular.ttf'); 
+ }
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
+}
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('../fonts/poppins/Poppins-Medium.ttf'); 
+}
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url('../fonts/montserrat/Montserrat-Bold.ttf'); 
+}
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;	
+	font-family: 'Poppins',sans-serif;
+}
+body{
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	background: linear-gradient(90deg, rgba(185,238,255,1) 0%, rgba(67,159,228,0.9752101524203431) 41%, rgba(157,238,255,1) 86%);
+}
+span{
+	font-family: Poppins-Regular;
+}
+.container{
+	max-width: 700px;
+	max-height: 620px;
+	background-color: #fff;
+	width: 100%;
+	padding: 25px 30px;
+	border-radius: 5px;
+
+}
+.container .title{
+	color:#023E8A;
+	font-size: 27px;
+	font-weight: 500;
+	font-family: Poppins-Bold;
+	position: relative;	
+	text-align: center;
+}
+
+.container form .user-details{ /*inputs acomodados en línea*/
+ 	display: flex;
+ 	flex-wrap: wrap;
+ 	justify-content: space-between;
+ 	margin: 20px 0 12px 0; /*margin top y bottom entre inputs*/
+
+}
+form .user-details .input-box{
+	margin-bottom: 15px;
+	width: calc(100% / 2 - 20px);
+}
+.user-details .input-box .details{
+	display: block;
+	font-weight: 500;
+	margin-bottom: 5px;
+	
+}
+.user-details .input-box input{
+	height: 45px;
+	width: 100%;
+	outline: none;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	padding-left: 15px; /*el required no queda pegado a la izq*/
+	font-size: 16px;
+	border-bottom-width: 2px;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+	border-color:#ADE8F4; /*color borde inputs CAMBIARLO*/
+}
+form .buttom{
+	height: 50px;
+	display: inline-block;
+	position: relative;
+	bottom: 60px;
+	left: 500px;
+	
+}
+form .buttom2{
+	height: 50px;
+	margin-bottom:1000px;
+	display: inline-block;
+	position: relative;
+	bottom: 60px;
+	left: 320px;
+	
+}
+form .buttom input{ /*tamaño boton*/
+	height: 65%;
+	width: 110%;
+	outline:none;
+	color:#fff;
+	border:none;
+	font-size: 16px;
+	font-weight: 500;
+	border-radius: 5px;
+	background:#00B4D8;
+	font-family: Montserrat-Bold;
+}
+form .buttom2 input{ /*tamaño boton*/
+	height: 65%;
+	width: 120%;
+	outline:none;
+	color:#fff;
+	border:none;
+	font-size: 16px;
+	font-weight: 500;
+	border-radius: 5px;
+	background:#00B4D8;
+	font-family: Montserrat-Bold;
+}
+
+form .buttom input:hover{
+	background:#48CAE4;
+}
+
+/*formulario responsive*/
+@media(max-height: 584px){
+	.container{
+		max-width: 100%;
+	}
+
+	form .user-details .input-box{
+	margin-bottom: 15px;
+	width: 100%;
+	}
+
+	.container form .user-details{
+		max-height: 300px;
+		overflow-y: scroll;
+	}
+
+	.user-details::-webkit-scrollbar{
+		width: 0;
+	}
+}
