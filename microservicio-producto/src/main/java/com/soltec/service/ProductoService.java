@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import com.soltec.entities.Producto;
 
+
 public interface ProductoService {
 	public Iterable<Producto> findAll();
 

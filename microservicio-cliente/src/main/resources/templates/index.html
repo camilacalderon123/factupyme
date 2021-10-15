@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> <!--para utilizar información dinámica en HTML-->
+    <head>
+        <title>Inicio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Inicio</h1>
+        <br/>
+        <div > <!--Acá validamos que la lista sea diferente de null o vacia--> 
+            <table border="1">
+                <tr>
+                    <th>Nit</th>
+                    <th>Departamento</th>
+                    <th>Pais</th>
+                    <th>Nombre</th>
+                </tr>
+
+                <tr th:each="cliente : ${cliente}"> <!--se coloca el nombre de la llave que se asigna en el controlador--> 
+                    <td th:text="${cliente.NIT}">Mostar NIT</td> <!--El valor dentro de la etiqueta va a ser sustituido por la info que se recupera--> 
+                    <td th:text="${cliente.departamento}">Mostar depa</td>      
+                    <td th:text="${cliente.pais}">Mostar pais</td>
+                    <td th:text="${cliente.nombre}">Mostar nombre</td>
+                </tr>
+            </table> 
+        </div>
+        <div th:if="${cliente == null or cliente.empty }">
+            <p>La lista de personas está vacía.</p>
+        </div>
+    </body>
+</html>

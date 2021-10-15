@@ -8,14 +8,12 @@ import com.soltec.entities.Cliente;
 import java.util.Optional;
 
 
-/**
- *
- * @author Camila
- */
+
+
 public interface ClienteService {
 	public Iterable<Cliente> findAll();
 
-	public Optional<Cliente> findById(Long ID);
+	public Optional<Cliente> findById(Long id);
 
 	public Cliente save(Cliente cliente);
 
