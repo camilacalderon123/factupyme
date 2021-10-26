@@ -7,44 +7,51 @@ package com.soltec.service;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.soltec.entities.Cliente;
 import com.soltec.repository.ClienteRepository;
 
-
 @Service
 public class ClienteServiceImpl implements ClienteService {
 	
 	@Autowired
-	private ClienteRepository clienteRepo;
+	private ClienteRepository clientRepository;
 	
 	@Override
-	@Transactional(readOnly = true) //Transaccion de solo lectura, quiere decir que no se va a cambiar ni a guardar nada de la base de datos
+	@Transactional(readOnly=true)
 	public Iterable<Cliente> findAll() {
-		return clienteRepo.findAll();
+		return clientRepository.findAll();
 	}
 
 	@Override
-	@Transactional(readOnly = true)
-	public Optional<Cliente> findById(Long ID) {
-		return clienteRepo.findById(ID);
+	@Transactional(readOnly=true)
+	public Page<Cliente> findAll(Pageable pagebale) {
+		return clientRepository.findAll(pagebale);
 	}
 
 	@Override
-	@Transactional //solo transaccional ya quiere decir que va a hacer un cambio en la BD
-	public Cliente save(Cliente cliente) {
-		return clienteRepo.save(cliente);
+	@Transactional(readOnly=true)
+	public Optional<Cliente> findById(Integer NIT) {
+		return clientRepository.findById(NIT);
 	}
 
 	@Override
 	@Transactional
-	public void deleteById(Long ID) {
-		clienteRepo.deleteById(ID);
-		
+	public Cliente save(Cliente client) {
+		return clientRepository.save(client);
+	}
+
+	@Override
+	@Transactional
+	public void deleteById(Integer NIT) {
+		clientRepository.deleteById(NIT);
 	}
 	
+
 	
 
 }

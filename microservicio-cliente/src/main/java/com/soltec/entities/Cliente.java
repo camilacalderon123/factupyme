@@ -7,7 +7,6 @@ package com.soltec.entities;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import lombok.Data;
 
 /**
  *
@@ -15,11 +14,10 @@ import lombok.Data;
  */
 
 @Entity
-@Data
 @Table(name = "cliente")
 public class Cliente {
 	@Id
-	private int NIT;
+	private Integer NIT;
 	private String departamento;
 	private String pais;
 	private String nombre;
@@ -30,10 +28,10 @@ public class Cliente {
 	private String nombre_comercial;
 	private String municipio;
 	private int tipo_documento;
-	public int getNIT() {
+	public Integer getNIT() {
 		return NIT;
 	}
-	public void setNIT(int nIT) {
+	public void setNIT(Integer nIT) {
 		NIT = nIT;
 	}
 	public String getDepartamento() {
@@ -96,5 +94,7 @@ public class Cliente {
 	public void setTipo_documento(int tipo_documento) {
 		this.tipo_documento = tipo_documento;
 	}
+	
+
 	
 }

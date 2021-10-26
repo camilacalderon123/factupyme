@@ -7,18 +7,17 @@ package com.soltec.entities;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import lombok.Data;
 
 /**
  *
  * @author Camila
  */
 @Entity
-@Data
 @Table(name = "tipo_documento")
 public class Tipo_documento {
     @Id
     private int id_tipo_documento;
+    
     private String descripcion;
     
 	public int getId_tipo_documento() {
