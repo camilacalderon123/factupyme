@@ -200,49 +200,64 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="title_client">Clientes</h1>
+                    <h1 class="title_client">Agregar clientes</h1>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Número de documento</th>
-                                            <th>Nombre</th>
-                                            <th>Correo</th>
-                                            <th>Nombre comercial</th>
-                                            <th>Dirección</th>
-                                            <th>Acciones</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Número de documento</th>
-                                            <th>Nombre</th>
-                                            <th>Correo</th>
-                                            <th>Nombre comercial</th>
-                                            <th>Dirección</th>
-                                            <th>Acciones</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td>1010045100</td>
-                                            <td>Pepito Perez</td>
-                                            <td>Pepito@gmail.com</td>
-                                            <td>Kwik E Mart</td>
-                                            <td>AV. siempre viva</td>
-                                            <td>
-                                               <a href="#"><img class="img_client" src="icons/pencil.png" alt=""></a>
-                                               <img class="img_client" src="icons/delete.png" alt="">
-                                            </td>
-                                        </tr>
-                                       
-   
-                                    </tbody>
-                                </table>
+                       <div class="card-body">
+                         <form action="#">
+                           <div class="user-details">
+                            <div class="input-box">
+                                <span class="details">Tipo de documento</span>
+                                <input type="text" placeholder="" required>
                             </div>
+                                <div class="input-box">
+                                    <span class="details">Número de documento</span>
+                                    <input type="number"  required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Nombre comercial</span>
+                                    <input type="text" placeholder="" required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Dirección</span>
+                                    <input type="text"  required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">País</span>
+                                    <input type="text"  required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Departamento</span>
+                                    <input type="text"  required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Municipio/ciudad</span>
+                                    <input type="text"  required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Correo</span>
+                                    <input type="text"  required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Teléfono</span>
+                                    <input type="text" required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Contribuyente</span>
+                                    <input type="text" required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details">Regimen contable</span>
+                                    <input type="text" required>
+                                </div>
+                            </div>
+                            <div class="buttom">
+                                <input type="submit" value="Guardar">
+                            </div>
+                            <div class="buttom2">
+                               <a href="ver-clientes.html">Cancelar</a> 
+                            </div>
+                        </form>
                         </div>
                     </div>
 

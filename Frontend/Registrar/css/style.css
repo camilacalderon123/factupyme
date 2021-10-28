@@ -28,7 +28,8 @@ body{
 	justify-content: center;
 	align-items: center;
 	padding: 10px;
-	background: linear-gradient(90deg, rgba(185,238,255,1) 0%, rgba(67,159,228,0.9752101524203431) 41%, rgba(157,238,255,1) 86%);
+	background: rgb(217,246,255);
+	background: linear-gradient(90deg, rgba(217,246,255,1) 3%, rgba(173,230,250,0.9752101524203431) 42%, rgba(227,250,255,1) 87%);
 }
 span{
 	font-family: Poppins-Regular;
