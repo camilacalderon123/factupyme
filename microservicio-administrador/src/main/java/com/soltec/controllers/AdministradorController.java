@@ -7,4 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/administrador")//Se accede a través de esta URL
 public class AdministradorController {
 
+	
+	
 }
