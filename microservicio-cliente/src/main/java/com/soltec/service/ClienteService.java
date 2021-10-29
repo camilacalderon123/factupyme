@@ -15,9 +15,9 @@ public interface ClienteService {
 	
 	public Page<Cliente> findAll(Pageable pagebale);
 	
-	public Optional<Cliente> findById(Integer NIT); 
+	public Optional<Cliente> findById(Integer numero_documento); 
 	
 	public Cliente save(Cliente user);
 	
-	public void deleteById(Integer NIT);
+	public void deleteById(Integer numero_documento);
 }

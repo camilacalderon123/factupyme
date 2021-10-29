@@ -35,8 +35,8 @@ public class ClienteServiceImpl implements ClienteService {
 
 	@Override
 	@Transactional(readOnly=true)
-	public Optional<Cliente> findById(Integer NIT) {
-		return clientRepository.findById(NIT);
+	public Optional<Cliente> findById(Integer numero_documento) {
+		return clientRepository.findById(numero_documento);
 	}
 
 	@Override
@@ -47,7 +47,7 @@ public class ClienteServiceImpl implements ClienteService {
 
 	@Override
 	@Transactional
-	public void deleteById(Integer NIT) {
-		clientRepository.deleteById(NIT);
+	public void deleteById(Integer numero_documento) {
+		clientRepository.deleteById(numero_documento);
 	}
 }
