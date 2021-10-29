@@ -72,6 +72,50 @@ form .user-details .input-box{
 	border-color:#ADE8F4; /*color borde inputs CAMBIARLO*/
 }
 
+form .buttom{
+	height: 50px;
+	display: inline-block;
+	position: relative;
+	bottom: 60px;
+	left: 500px;
+	
+}
+form .buttom2{
+	height: 50px;
+	margin-bottom:1000px;
+	display: inline-block;
+	position: relative;
+	bottom: 60px;
+	left: 320px;
+	
+}
+form .buttom input{ /*tamaño boton*/
+	height: 65%;
+	width: 110%;
+	outline:none;
+	color:#fff;
+	border:none;
+	font-size: 16px;
+	font-weight: 500;
+	border-radius: 5px;
+	background:#00B4D8;
+}
+form .buttom2 a{ /*tamaño boton*/
+	height: 65%;
+	width: 110%;
+	padding: 5px;
+	text-decoration: none;
+	color:#fff;
+	border:none;
+	font-size: 16px;
+	font-weight: 500;
+	border-radius: 5px;
+	background:#00B4D8;
+}
+
+form .buttom input:hover{
+	background:#48CAE4;
+}
 
 
 /*formulario responsive*/
