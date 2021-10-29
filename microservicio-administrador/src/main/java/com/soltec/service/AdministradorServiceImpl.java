@@ -12,37 +12,37 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.soltec.entities.Cliente;
-import com.soltec.repository.ClienteRepository;
+import com.soltec.entities.Usuario;
+import com.soltec.repository.AdministradorRepository;
 
 @Service
-public class ClienteServiceImpl implements ClienteService {
+public class AdministradorServiceImpl implements AdministradorService {
 	
 	@Autowired
-	private ClienteRepository clientRepository;
+	private AdministradorRepository clientRepository;
 	
 	@Override
 	@Transactional(readOnly=true)
-	public Iterable<Cliente> findAll() {
+	public Iterable<Usuario> findAll() {
 		return clientRepository.findAll();
 	}
 
 	@Override
 	@Transactional(readOnly=true)
-	public Page<Cliente> findAll(Pageable pagebale) {
+	public Page<Usuario> findAll(Pageable pagebale) {
 		return clientRepository.findAll(pagebale);
 	}
 
 	@Override
 	@Transactional(readOnly=true)
-	public Optional<Cliente> findById(Integer NIT) {
+	public Optional<Usuario> findById(Integer NIT) {
 		return clientRepository.findById(NIT);
 	}
 
 	@Override
 	@Transactional
-	public Cliente save(Cliente client) {
-		return clientRepository.save(client);
+	public Usuario save(Usuario user) {
+		return clientRepository.save(user);
 	}
 
 	@Override
