@@ -1,12 +1,22 @@
 package com.soltec.controllers;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController // Controlador de tipo Rest
-@RequestMapping("/administrador")//Se accede a través de esta URL
+@Controller
 public class AdministradorController {
-
+	@RequestMapping("/")
+    public String index() {
+       
+        return "index";
+    }
 	
+	@PostMapping({"/validacion"})
+	public String validacion() {
+		System.out.println("bien");
+		return "prueba";
+	}
 	
 }

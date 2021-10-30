@@ -10,12 +10,10 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name="tipo_documento")
-@NamedQuery(name="TipoDocumento.findAll", query="SELECT t FROM TipoDocumento t")
-public class TipoDocumento implements Serializable {
-	private static final long serialVersionUID = 1L;
+public class TipoDocumento{
 
 	private String descripcion;
-
+	@Id
 	@Column(name="id_tipo_documento")
 	private int idTipoDocumento;
 

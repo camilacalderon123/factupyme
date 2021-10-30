@@ -9,9 +9,8 @@ import javax.persistence.*;
  * 
  */
 @Entity
-@NamedQuery(name="Empresa.findAll", query="SELECT e FROM Empresa e")
-public class Empresa implements Serializable {
-	private static final long serialVersionUID = 1L;
+@Table(name = "empresa")
+public class Empresa{
 
 	@Column(name="correo_empresa")
 	private String correoEmpresa;
@@ -24,6 +23,7 @@ public class Empresa implements Serializable {
 
 	private String municipio;
 
+	@Id
 	private int nit;
 
 	@Column(name="nombre_representante")
