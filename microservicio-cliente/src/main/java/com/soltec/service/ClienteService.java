@@ -11,6 +11,7 @@ import org.springframework.data.domain.Pageable;
 
 
 public interface ClienteService {
+	
 	public Iterable<Cliente> findAll(); //Devuelve un Iterable del objeto usuario 
 	
 	public Page<Cliente> findAll(Pageable pagebale);

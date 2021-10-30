@@ -35,7 +35,6 @@ public class ClienteController {
 		model.addAttribute("list", clientService.findAll());
 		return "Dashboard/ver-clientes";
 	}
-	
 	//agregar
 	@PostMapping("/crear-cliente")
 	public String crear(@RequestBody Cliente cliente, Model model) {
