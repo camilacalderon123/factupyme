@@ -43,6 +43,9 @@ public class Empresa{
 	public Empresa() {
 	}
 
+	
+	
+	
 	public String getCorreoEmpresa() {
 		return this.correoEmpresa;
 	}

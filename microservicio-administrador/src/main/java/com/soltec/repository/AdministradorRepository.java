@@ -12,5 +12,5 @@ import com.soltec.entities.Usuario;
 
 @Repository
 public interface AdministradorRepository extends JpaRepository<Usuario, Integer> {
-    
+	
 }

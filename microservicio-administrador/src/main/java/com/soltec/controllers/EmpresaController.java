@@ -76,7 +76,7 @@ public class EmpresaController {
 		return empresa;
 	}
 	*/
-	//Listar todos los usuarios
+	//Listar todas las empresas
 	@GetMapping
 	public List<Empresa> leerTodos(){
 		List<Empresa> empresa= StreamSupport.stream(empresaService.findAll().spliterator(),false).collect(Collectors.toList());
