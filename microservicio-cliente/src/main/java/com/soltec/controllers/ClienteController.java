@@ -40,7 +40,7 @@ public class ClienteController {
 		return "Dashboard/agregar-cliente";	
 	}
 	
-	@PostMapping("clientes-creado")
+	@PostMapping("/clientes-creado")
 	public String crearCliente(@RequestBody Cliente cliente, Model model) {
 		clientService.save(cliente);	
 		return "redirect:/clientes";	
