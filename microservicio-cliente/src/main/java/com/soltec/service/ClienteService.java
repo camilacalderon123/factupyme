@@ -18,7 +18,7 @@ public interface ClienteService {
 	
 	public Optional<Cliente> findById(Integer numero_documento); 
 	
-	public Cliente save(Cliente user);
+	public Cliente save(Cliente client);
 	
 	public void deleteById(Integer numero_documento);
 }

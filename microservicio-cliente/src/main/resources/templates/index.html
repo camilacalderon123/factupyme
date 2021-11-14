@@ -7,51 +7,8 @@
         <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
     </head>
     <body>
-        <h1>Clientes</h1>
-        <div class="container"></div>
-        <br>
-        <div>
-         <a href="/crear" class="btn btn-primary">Agregar</a> 
-        </div>
-        <div th:switch="${list}">
-          <h2 th:case="null">F</h2>
-          <div th:case="*">
-            <h2>Clientes</h2>
-             <table class="table">
-            	 <thead>
-            	   <tr>
-            	   	 <th>NIT</th>
-            	   	 <th>Departamento</th>
-            	   	 <th>pais</th>
-            	   	 <th>nombre</th>
-            	   	 <th>correo</th>
-            	   	 <th>direccion</th>
-            	   	 <th>numero_documento</th>
-            	   	 <th>razon_social</th>
-            	   	 <th>nombre_comercial</th>
-            	   	 <th>municipio</th>
-            	   	 <th>tipo_documento</th>
-            	   </tr>
-            	 </thead>
-            	 <tbody>
-            	     <tr th:each="cliente : ${list}">
-            	       <td th:text="${cliente.NIT}"></td>
-            	       <td th:text="${cliente.departamento}"></td>
-            	       <td th:text="${cliente.pais}"></td>
-            	       <td th:text="${cliente.nombre}"></td>
-            	       <td th:text="${cliente.correo}"></td>
-            	       <td th:text="${cliente.direccion}"></td>
-            	       <td th:text="${cliente.numero_documento}"></td>
-            	       <td th:text="${cliente.razon_social}"></td>
-            	       <td th:text="${cliente.nombre_comercial}"></td>
-            	       <td th:text="${cliente.municipio}"></td>
-            	       <td th:text="${cliente.tipo_documento}"></td>     
-            	     </tr>            	 
-            	 </tbody> 
-             </table>
-          </div>        
-        </div>
-        
+        <h1>Clientes si funciona jeje</h1>
+
         
         
     </body>
