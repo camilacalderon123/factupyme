@@ -1,4 +1,4 @@
-
+ 
 package com.soltec.service;
 
 import com.soltec.entities.Cliente;
@@ -12,7 +12,7 @@ import org.springframework.data.domain.Pageable;
 
 public interface ClienteService {
 	
-	public Iterable<Cliente> findAll(); //Devuelve un Iterable del objeto usuario 
+	public Iterable<Cliente> findAll(); //Devuelve un Iterable del objeto cliente 
 	
 	public Page<Cliente> findAll(Pageable pagebale);
 	

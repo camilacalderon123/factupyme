@@ -8,10 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- *
- * @author Camila
- */
+
 @Entity
 @Table(name = "tipo_documento")
 public class Tipo_documento {

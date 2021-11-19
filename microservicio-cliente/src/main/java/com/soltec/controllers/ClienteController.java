@@ -2,6 +2,7 @@
 package com.soltec.controllers;
 import java.util.List;
 import java.util.Optional;
+//import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -66,6 +67,7 @@ public class ClienteController {
 		if (!clientService.findById(id_cliente).isPresent()) {
 			return ResponseEntity.notFound().build(); 
 		}
+		
 		clientService.deleteById(id_cliente);
 		return ResponseEntity.ok().build();
 	}

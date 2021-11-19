@@ -4,14 +4,12 @@
  */
 package com.soltec.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- *
- * @author Camila
- */
+
 
 @Entity
 @Table(name = "cliente")
