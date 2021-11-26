@@ -7,11 +7,6 @@ import java.util.stream.StreamSupport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-<<<<<<< HEAD
-=======
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
->>>>>>> dc38a9f4c412020805fad345b2241f39396aaf88
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,9 +17,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
 import com.soltec.entities.Producto;
 import com.soltec.service.ProductoService;
@@ -32,11 +24,11 @@ import com.soltec.service.ProductoService;
 
 
 @RestController // Controlador de tipo Rest
-<<<<<<< HEAD
+
 @CrossOrigin(origins="http://localhost:4200", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE}) //Con esto le decimos que acepte peticiones
-=======
-@CrossOrigin(origins="http://localhost:4200") //Con esto le decimos que acepte peticiones
->>>>>>> dc38a9f4c412020805fad345b2241f39396aaf88
+
+
+
 @RequestMapping("/producto")
 public class ProductoController {
 
@@ -64,8 +56,8 @@ public class ProductoController {
 			return ResponseEntity.notFound().build();
 		}
 		return ResponseEntity.ok(producto);
-<<<<<<< HEAD
-=======
+
+
 	}
 	
 	//Editar un producto
@@ -85,7 +77,7 @@ public class ProductoController {
 		producto.get().setValor_unitario(productoEditar.getValor_unitario());
 		
 		return ResponseEntity.status(HttpStatus.CREATED).body(productoService.save(producto.get()));
->>>>>>> dc38a9f4c412020805fad345b2241f39396aaf88
+
 	}
 	
 	//Editar un producto
