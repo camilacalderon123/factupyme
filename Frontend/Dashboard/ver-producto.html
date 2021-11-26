@@ -31,6 +31,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
+ 
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
@@ -39,7 +40,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Empresa</sup></div>
+                <div class="sidebar-brand-text mx-3">Empresa</div>
             </a>
 
             <!-- Divider -->
@@ -52,14 +53,13 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="inicioapp.html">
                     <i class="fas fa-home"></i>
                     <span>Inicio</span></a>
             </li>
-
             <hr class="sidebar-divider">
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
                     aria-controls="collapseTwo">
                     <i class="fas fa-box-open"></i>
@@ -69,12 +69,13 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Opciones</h6>
-                        <a class="collapse-item active" href="buttons.html">Ver productos</a>
-                        <a class="collapse-item" href="cards.html">Agregar producto</a>
+                        <a class="collapse-item active" href="ver-producto.html">Ver productos</a>
+                        <a class="collapse-item" href="agregar-producto.html">Agregar producto</a>
                     </div>
                 </div>
             </li>
-   <!-- Nav Item - Clientes Collapse Menu -->
+
+            <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
@@ -85,32 +86,32 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Opciones</h6>
-                        <a class="collapse-item" href="utilities-color.html">Ver clientes</a>
-                        <a class="collapse-item" href="utilities-border.html">Agregar cliente</a>
+                        <a class="collapse-item" href="ver-clientes.html">Ver clientes</a>
+                        <a class="collapse-item" href="agregar-cliente.html">Agregar cliente</a>
                     </div>
                 </div>
             </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
+            
 
-         <!-- Nav Item - Facturación Menu -->
+            <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-copy"></i>
-                   <!-- <i><img src="img/editar.png" width="30" height="30"></i>-->
+                    <i class="fas fa-fw fa-folder"></i>
                     <span>Facturación</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Opciones</h6>
-                        <a class="collapse-item" href="register.html">Facturación electrónica</a>
-                        <a class="collapse-item" href="forgot-password.html">Rangos de numeración</a>
+                        <a class="collapse-item" href="ver-facturas.html">Ver facturas</a>
+                        <a class="collapse-item" href="emitir-factura.html">Emitir factura</a>
+                        <a class="collapse-item" href="agregar-rangos_numeracion.html">Rangos de numeración</a>
                     </div>
                 </div>
             </li>
-
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -223,104 +224,52 @@
                                     <thead>
                                         <tr>
                                             <th>ID producto</th>
+                                            <th>Nombre</th>
                                             <th>Descripción</th>
-                                            <th>Unidad de medida</th>
+                                            <th>U/M</th>
                                             <th>Valor unitario</th>
                                             <th>IVA</th>
-                                            <th>Acciones</th>
+                                            <th>Editar</th>
+                                            <th>Eliminar</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>1</td>
-                                            <td>Cama doble</td>
-                                            <td>Unidad</td>
-                                            <td>300000</td>
+                                            <td>001</td>
+                                            <td>Lapicero rojo</td>
+                                            <td>Lapicero rojo norma</td>
+                                            <td>Lapicero</td>
+                                            <td>1.500</td>
                                             <td>19%</td>
-                                            <td>Editar - dar de baja</td>
+                                            <td>
+                                            <button class="btn boton-accion" href="#">
+                                            <i class="fas fa-pencil-alt"></i>
+                                            </button>
+                                            </td>
+                                            <td>
+                                            <button class="btn boton-accion">
+                                            <i class="far fa-trash-alt"></i>
+                                            </button>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>2</td>
-                                            <td>Silla</td>
-                                            <td>Unidad</td>
-                                            <td>30000</td>
+                                            <td>001</td>
+                                            <td>Lapicero negro</td>
+                                            <td>Lapicero negro norma</td>
+                                            <td>Lapicero</td>
+                                            <td>1.500</td>
                                             <td>19%</td>
-                                            <td>Editar - dar de baja</td>
+                                            <td>
+                                            <button class="btn boton-accion" href="#">
+                                            <i class="fas fa-pencil-alt"></i>
+                                            </button>
+                                            </td>
+                                            <td>
+                                            <button class="btn boton-accion">
+                                            <i class="far fa-trash-alt"></i>
+                                            </button>
+                                            </td>
                                         </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Mesa</td>
-                                            <td>Unidad</td>
-                                            <td>30000</td>
-                                            <td>19%</td>
-                                            <td>Editar - dar de baja</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Cama normal</td>
-                                            <td>Unidad</td>
-                                            <td>300000</td>
-                                            <td>19%</td>
-                                            <td>Editar - dar de baja</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>Comedor</td>
-                                            <td>Unidad</td>
-                                            <td>300000</td>
-                                            <td>19%</td>
-                                            <td>Editar - dar de baja</td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>Mesa</td>
-                                            <td>Unidad</td>
-                                            <td>300000</td>
-                                            <td>19%</td>
-                                            <td>Editar - dar de baja</td>
-                                        </tr>
-                                        <tr>
-                                            <td>7</td>
-                                            <td>Cama mediana</td>
-                                            <td>Unidad</td>
-                                            <td>300000</td>
-                                            <td>19%</td>
-                                            <td>Editar - dar de baja</td>
-                                        </tr>
-                                        <tr>
-                                            <td>8</td>
-                                            <td>Silla</td>
-                                            <td>Unidad</td>
-                                            <td>75000</td>
-                                            <td>19%</td>
-                                            <td>Editar - dar de baja</td>
-                                        </tr>
-                                        <tr>
-                                            <td>9</td>
-                                            <td>Cama de dos pisos</td>
-                                            <td>Unidad</td>
-                                            <td>300000</td>
-                                            <td>19%</td>
-                                            <td>Editar - dar de baja</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10</td>
-                                            <td>Mueble</td>
-                                            <td>Unidad</td>
-                                            <td>300000</td>
-                                            <td>19%</td>
-                                            <td>Editar - dar de baja</td>
-                                        </tr>
-                                        <tr>
-                                            <td>11</td>
-                                            <td>Escritorio</td>
-                                            <td>Unidad</td>
-                                            <td>300000</td>
-                                            <td>19%</td>
-                                            <td>Editar - dar de baja</td>
-                                        </tr>
-                                        
-                                        
                                     </tbody>
                                 </table>
                             </div>
@@ -346,15 +295,15 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">¿Cerrar sesión?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body"> Seleccione "Salir" si está listo para cerrar su sesión.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-primary" href="login.html">Salir</a>
                 </div>
             </div>
         </div>

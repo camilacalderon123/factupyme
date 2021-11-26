@@ -6,8 +6,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
     <title>Clientes</title>
 
@@ -100,9 +98,9 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Opciones</h6>
-                        <a class="collapse-item" href="register.html">Ver facturas</a>
-                        <a class="collapse-item" href="login.html">Emitir factura</a>
-                        <a class="collapse-item" href="register.html">Rangos de numeración</a>
+                        <a class="collapse-item" href="ver-facturas.html">Ver facturas</a>
+                        <a class="collapse-item" href="emitir-factura.html">Emitir factura</a>
+                        <a class="collapse-item" href="agregar-rangos_numeracion.html">Rangos de numeración</a>
                     </div>
                 </div>
             </li>
@@ -219,7 +217,8 @@
                                          <th>Contribuyente</th>
                                          <th>Regimen contable</th>
                                          <th>tipo de documento</th>
-                                        <th>Acciones</th>
+                                        <th>Editar</th>
+                                        <th>Eliminar</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -236,7 +235,8 @@
                                          <th>Contribuyente</th>
                                          <th>Regimen contable</th>
                                          <th>tipo de documento</th>
-                                         <th>Acciones</th>
+                                        <th>Editar</th>
+                                        <th>Eliminar</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -247,16 +247,22 @@
                                             <td>Colombia</td>
                                             <td>Norte de santander</td>
                                             <td>Cucuta</td>
-                                            <td>Av. kasdkajd</td>
-                                            <td>Pepito@gmail.com</td>
+                                            <td>Calle 10</td>
+                                            <td>camila@gmail.com</td>
                                             <td>3212030377</td>                                           
                                             <td>contribuyente</td>
                                             <td>contable</td>
-                                            <td>AV. siempre viva</td>
+                                            <td>Cédula</td>
                                             <td>
-                                               <a href="#"><img class="img_client" src="icons/pencil.png" alt=""></a>
-                                               <img class="img_client" src="icons/delete.png" alt="">
-                                            </td>
+                                             <button class="btn boton-accion" href="editar-cliente.html">
+                                              <i class="fas fa-pencil-alt" ></i>
+                                             </button>                                         
+                                            </td> 
+                                            <td>
+                                             <button class="btn boton-accion">
+                                              <i class="far fa-trash-alt"></i>
+                                             </button>
+                                        </td>
                                         </tr>
                                        
    
