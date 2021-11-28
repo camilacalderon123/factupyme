@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Facturas</title>
+    <title>Usuarios</title>
 
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,7 +19,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/emitir-factura.css">
+    <link rel="stylesheet" type="text/css" href="css/ver-clientes.css">
 
     <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
@@ -127,6 +127,12 @@
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <form class="form-inline">
+                        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </form>
 
                     <!-- Topbar Search -->
                     <form
@@ -157,7 +163,8 @@
                                 <form class="form-inline mr-auto w-100 navbar-search">
                                     <div class="input-group">
                                         <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Buscar" aria-label="Buscar" aria-describedby="basic-addon2">
+                                            placeholder="Buscar" aria-label="Buscar"
+                                            aria-describedby="basic-addon2">
                                         <div class="input-group-append">
                                             <button class="btn btn-primary" type="button">
                                                 <i class="fas fa-search fa-sm"></i>
@@ -168,14 +175,15 @@
                             </div>
                         </li>
 
-
+                       
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Nombre del usuario</span>
-                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle"
+                                    src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -193,71 +201,64 @@
                 </nav>
                 <!-- End of Topbar -->
 
-                                        <!-- Begin Page Content -->
-                    <div class="container-fluid">
-    
-                        <!-- Page Heading -->
-                        <h1 class="title_client">Elija el cliente a facturar</h1>
-                        <!-- DataTales Example -->
-                        <div class="card shadow mb-4">
-                            <div class="card-body" >
-                                <div class="table-responsive">
-                                      <table #dataTable class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                        <thead>
-                                          <tr>
-                                            <th>Código</th>
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="title_client">Usuarios</h1>
+                    <button href="agregar-usuario.html" class="btn btn-primary" style="margin: 10px;"> Agregar Usuario</button>
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
                                             <th>Nombre</th>
-                                            <th>U/M</th>
-                                            <th>Vr. Unit.</th>
-                                            <th>% Dcto.</th>
-                                            <th>IVA</th>
-                                            <th>Seleccionar</th>
-                                          </tr>
-                                        </thead>
-                                        <tfoot>
-                                          <tr>
-                                            <th>Código</th>
-                                            <th>Nombre</th>
-                                            <th>U/M</th>
-                                            <th>Vr. Unit.</th>
-                                            <th>% Dcto.</th>
-                                            <th>IVA</th>
-                                            <th>Seleccionar</th>
-                                          </tr>
-                                      </tfoot>                          
-                                       <tbody>
-                                          <tr >
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>                    
+                                            <th>Apellidos</th>
+                                            <th>Correo</th>
+                                            <th>Rol</th>
+                                            <th>Estado</th>
+                                            <th>Editar</th>
+                                            <th>Eliminar</th>
+                                        </tr>
+                                    </thead>
+                                    
+                                    <tbody>
+                                        <tr>
+                                            <td>Pepito</td>
+                                            <td>Perez Suárez</td>
+                                            <td>Pepito@gmail.com</td>
+                                            <td>Vendedor</td>
+                                            <td>Activo</td>
                                             <td>
-                                              <button class="btn boton-accion" >
-                                                <i class="fas fa-plus-circle" style="color: rgb(94, 94, 243);"></i>
-                                              </button>                                         
-                                            </td> 
-                                         </tr>     
-                                        </tbody>
-                                      </table>
-                                </div>
+                                            <button class="btn boton-accion" href="#">
+                                            <i class="fas fa-pencil-alt"></i>
+                                            </button>
+                                            </td>
+                                            <td>
+                                            <button class="btn boton-accion">
+                                            <i class="far fa-trash-alt"></i>
+                                            </button>
+                                            </td>
+                                        </tr>
+                                       
+   
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-    
                     </div>
-                    <!-- /.container-fluid -->
-    
-    
-    
 
+                </div>
+                <!-- /.container-fluid -->
 
             </div>
             <!-- End of Main Content -->
 
-
             <!-- Footer -->
-
+            <footer class="sticky-footer bg-white">
+            </footer>
             <!-- End of Footer -->
 
         </div>

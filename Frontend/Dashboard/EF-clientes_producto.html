@@ -20,6 +20,11 @@
     <!-- Custom styles for this template -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/emitir-factura.css">
+    <link rel="stylesheet" type="text/css" href="css/ver-clientes.css">
+    <link rel="stylesheet" type="text/css" href="css/inicio.css">
+    <link rel="stylesheet" type="text/css" href="css/emitir-factura.css">
+    <link rel="stylesheet" type="text/css" href="css/registrar-empresa.css">
+    <link rel="stylesheet" type="text/css" href="css/factura.css">
 
     <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
@@ -193,62 +198,95 @@
                 </nav>
                 <!-- End of Topbar -->
 
-                                        <!-- Begin Page Content -->
-                    <div class="container-fluid">
+
     
+                    <div class="container-fluid">
+
                         <!-- Page Heading -->
-                        <h1 class="title_client">Elija el cliente a facturar</h1>
+                        <h1 class="title_client">Emitir factura</h1>
                         <!-- DataTales Example -->
                         <div class="card shadow mb-4">
-                            <div class="card-body" >
-                                <div class="table-responsive">
-                                      <table #dataTable class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                        <thead>
-                                          <tr>
-                                            <th>Código</th>
-                                            <th>Nombre</th>
-                                            <th>U/M</th>
-                                            <th>Vr. Unit.</th>
-                                            <th>% Dcto.</th>
-                                            <th>IVA</th>
-                                            <th>Seleccionar</th>
-                                          </tr>
-                                        </thead>
-                                        <tfoot>
-                                          <tr>
-                                            <th>Código</th>
-                                            <th>Nombre</th>
-                                            <th>U/M</th>
-                                            <th>Vr. Unit.</th>
-                                            <th>% Dcto.</th>
-                                            <th>IVA</th>
-                                            <th>Seleccionar</th>
-                                          </tr>
-                                      </tfoot>                          
-                                       <tbody>
-                                          <tr >
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>                    
-                                            <td>
-                                              <button class="btn boton-accion" >
-                                                <i class="fas fa-plus-circle" style="color: rgb(94, 94, 243);"></i>
-                                              </button>                                         
-                                            </td> 
-                                         </tr>     
-                                        </tbody>
-                                      </table>
-                                </div>
+                            <div class="card-body">
+                                <form action="#">
+                                    <!--Inicio campos del cliente-->
+                                    <div class="input-box-numeracion">
+                                        <span class="span_details">No.</span>
+                                        <input class="input_numeracion" type="text" name="ciudad" required>
+                                    </div>
+
+                                    <div class="input-box">
+                                        <span class="details">Número de documento</span>
+                                        <input style="margin-left: 13px;" type="number" name="numero_documento" required>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Nombre</span>
+                                        <input style="margin-left: 13px;" type="text" name="nombre" required>
+                                    </div>
+
+                                    <div class="input-box">
+                                        <span class="details">Teléfono</span>
+                                        <input style="margin-left: 10px;" type="text" name="telefono"required>
+                                    </div>
+
+                                    <div class="input-box">
+                                        <span class="details">Correo</span>
+                                        <input style="margin-left: 24px;" type="text" name="correo" required>
+                                    </div>
+
+                                    <div class="input-box">
+                                        <span class="details">Ciudad</span>
+                                        <input style="margin-left: 23px;" type="text" name="ciudad" required>
+                                    </div>
+                                    <!--Fin campos del cliente-->
+                                    <hr>
+                                    <!--Inicio tabla de agregar los productos-->
+                                    <div class="table-responsive">
+                                        <table #dataTable class="table table-bordered" id="tablaprueba" width="100%" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Código</th>
+                                                    <th>Nombre</th>
+                                                    <th>U/M</th>
+                                                    <th>Vr. Unit.</th>
+                                                    <th>% Dcto.</th>
+                                                    <th>IVA</th>
+
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <select class="select_opciones">
+                                                            <option disabled selected>Buscar...</option>
+                                                            <option></option>
+                                                        </select>
+                                                    </td>
+                                                    <td>AA</td>
+                                                    <td>AA</td>
+                                                    <td>AA</td>
+                                                    <td>AA</td>
+                                                    <td>AA</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="form-group">
+                                            <button type="button" class="btn btn-edit" onclick="agregarFila()">
+                                                <i class="fas fa-plus"></i>
+                                            </button>
+                                            <button type="button" class="btn" onclick="eliminarFila()">
+                                                <i class="fas fa-minus-circle"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!--Fin tabla de agregar los productos-->
+                                    <div class="button2">
+                                        <button class="button_style">Siguiente</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-    
                     </div>
-                    <!-- /.container-fluid -->
-    
-    
+
+<!-- /.container-fluid -->
     
 
 
@@ -291,6 +329,8 @@
         </div>
     </div>
 
+    <!--Tabala del emitir-->
+    <script src="js/tabla.js"></script>
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

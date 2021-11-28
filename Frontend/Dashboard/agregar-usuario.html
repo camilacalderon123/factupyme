@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Facturas</title>
+    <title>Usuarios</title>
 
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,7 +19,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/emitir-factura.css">
+    <link rel="stylesheet" type="text/css" href="css/ver-clientes.css">
 
     <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
@@ -127,6 +127,12 @@
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <form class="form-inline">
+                        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </form>
 
                     <!-- Topbar Search -->
                     <form
@@ -193,71 +199,81 @@
                 </nav>
                 <!-- End of Topbar -->
 
-                                        <!-- Begin Page Content -->
-                    <div class="container-fluid">
-    
-                        <!-- Page Heading -->
-                        <h1 class="title_client">Elija el cliente a facturar</h1>
-                        <!-- DataTales Example -->
-                        <div class="card shadow mb-4">
-                            <div class="card-body" >
-                                <div class="table-responsive">
-                                      <table #dataTable class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                        <thead>
-                                          <tr>
-                                            <th>Código</th>
-                                            <th>Nombre</th>
-                                            <th>U/M</th>
-                                            <th>Vr. Unit.</th>
-                                            <th>% Dcto.</th>
-                                            <th>IVA</th>
-                                            <th>Seleccionar</th>
-                                          </tr>
-                                        </thead>
-                                        <tfoot>
-                                          <tr>
-                                            <th>Código</th>
-                                            <th>Nombre</th>
-                                            <th>U/M</th>
-                                            <th>Vr. Unit.</th>
-                                            <th>% Dcto.</th>
-                                            <th>IVA</th>
-                                            <th>Seleccionar</th>
-                                          </tr>
-                                      </tfoot>                          
-                                       <tbody>
-                                          <tr >
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>                    
-                                            <td>
-                                              <button class="btn boton-accion" >
-                                                <i class="fas fa-plus-circle" style="color: rgb(94, 94, 243);"></i>
-                                              </button>                                         
-                                            </td> 
-                                         </tr>     
-                                        </tbody>
-                                      </table>
-                                </div>
-                            </div>
-                        </div>
-    
-                    </div>
-                    <!-- /.container-fluid -->
-    
-    
-    
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
 
+                    <!-- Page Heading -->
+                    <h1 class="title_client">Agregar usuario</h1>
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-body">
+                            <form action="#">
+                                <div class="user-details">
+                                    <div class="input-box">
+                                        <span class="details">Nombre</span>
+                                        <input type="text" placeholder="" required>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Apellidos</span>
+                                        <input type="number" required>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Correo</span>
+                                        <input type="text" placeholder="" required>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Rol</span>
+                                        <input type="text" required>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Estado</span>
+                                        <input type="text" required>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Departamento</span>
+                                        <input type="text" required>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Municipio/ciudad</span>
+                                        <input type="text" required>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Correo</span>
+                                        <input type="text" required>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Teléfono</span>
+                                        <input type="text" required>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Contribuyente</span>
+                                        <input type="text" required>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Regimen contable</span>
+                                        <input type="text" required>
+                                    </div>
+                                </div>
+                                <div class="button">
+                                    <button class="button_style">Guardar</button>
+                                </div>
+
+                                <div class="button2">
+                                    <button href="ver-usuarios.html" class="button_style">Cancelar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
 
             </div>
             <!-- End of Main Content -->
 
-
             <!-- Footer -->
-
+            <footer class="sticky-footer bg-white">
+            </footer>
             <!-- End of Footer -->
 
         </div>
@@ -277,15 +293,15 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">¿Cerrar sesión?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Seleccione "Salir" si está listo para cerrar su sesión.</div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                    <a class="btn btn-primary" href="login.html">Salir</a>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
                 </div>
             </div>
         </div>
